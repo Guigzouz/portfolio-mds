@@ -1,0 +1,64 @@
+$base-color: #FFFCF5;
+$second-base-color: #50545F; 
+$grey: #7D7D7D;
+$light-grey: #AFABA0;
+
+$breakpoint-mobile: 600px;
+
+
+// GLOBAL STYLES
+html{
+    background-color: $base-color;
+}
+
+body{
+    margin: 0;
+}
+
+// DESKTOP STYLES
+@media (min-width: $breakpoint-mobile){
+#menu-collapsed{
+    ul{
+    display: flex;
+    width: 30vw;
+    padding: 0;
+    justify-content: space-around;
+    }
+}
+}
+
+// MOBILE STYLES
+@media (max-width: $breakpoint-mobile){
+
+    #div-toggle-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: sticky;
+        z-index: 2;
+        p{
+            margin: 0;
+        }
+    }
+
+    #menu-collapsed{
+            transition: all .25s;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: -9000px;
+            padding-top: 50px;
+    }
+    .menu-expanded{
+        transition: all .25s;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        background-color: $second-base-color;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0px !important;
+        top: 0;
+    }
+}
