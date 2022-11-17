@@ -3,10 +3,15 @@ $("#toggle-menu").click(function() {
     $("#menu-collapsed").toggleClass("menu-expanded");
     i++
     console.log(i)
-    // if(i % 2 === 0){
-    //     $("*").css("background-color", "red");
+    if(i % 2 === 0){
+        $("p").css("color", "#707070");
 
-    // } else{
-    //     $("*").css("background-color", "blue");
-    // }
+    } else{
+        $("p").css("color", "#AFABA0");
+    }
   });
+
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
