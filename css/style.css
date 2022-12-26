@@ -204,7 +204,38 @@ body {
     width: 100%;
   }
   body #projets .projet-description {
-    margin-top: 15vh;
+    height: 30vh;
+  }
+  #technologies {
+    padding-left: 0px;
+  }
+  #technologies .technologies-intro {
+    padding-left: 20px;
+  }
+  #technologies .technos {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  #technologies .technos div {
+    scroll-snap-align: start;
+  }
+  #technologies .techno {
+    width: 100vw;
+    flex-shrink: 0;
+    height: 100%;
+  }
+  #technologies #techno-1 {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  #technologies #techno-2 {
+    background-color: red;
   }
 }
 
