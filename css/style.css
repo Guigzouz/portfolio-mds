@@ -1,5 +1,6 @@
 html {
   background-color: #FFFCF5;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -207,6 +208,7 @@ body {
     height: 30vh;
   }
   #technologies {
+    margin-bottom: 10vh;
     padding-left: 0px;
   }
   #technologies .technologies-intro {
@@ -228,14 +230,155 @@ body {
     flex-shrink: 0;
     height: 100%;
   }
+  #technologies .techno #rightarrow {
+    margin-left: 35px;
+  }
   #technologies #techno-1 {
-    background-color: blue;
+    background-color: #F1EBDC;
     display: flex;
     align-items: center;
     padding-left: 20px;
   }
   #technologies #techno-2 {
-    background-color: red;
+    background-color: rgba(241, 235, 220, 0.2588235294);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #technologies #techno-2 img {
+    margin: 0px 10px 0px 10px;
+  }
+  #technologies h1 {
+    font-family: "ubuntu";
+    font-size: 24px;
+    font-weight: 600;
+    color: #707070;
+  }
+  #parcours {
+    margin-bottom: 10vh;
+    /* The Modal (background) */
+    /* Modal Content */
+    /* The Close Button */
+    /* The Modal (background) */
+    /* Modal Content */
+    /* The Close Button */
+  }
+  #parcours .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  #parcours .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  #parcours .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #parcours .close:hover,
+  #parcours .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #parcours #myBtn {
+    width: 90vw;
+    height: 25vh;
+    background-color: #F1EBDC;
+    border: solid;
+    border-color: #7D7D7D;
+    font-family: "ubuntu";
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 3vh;
+  }
+  #parcours .modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  #parcours .modal-content2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  #parcours .close2 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #parcours .close2:hover,
+  #parcours .close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #parcours #myBtn2 {
+    width: 90vw;
+    height: 25vh;
+    background-color: #F1EBDC;
+    border: solid;
+    border-color: #7D7D7D;
+    font-family: "ubuntu";
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+  }
+  #parcours a:link {
+    color: #50545F;
+  }
+  #contact {
+    /* unvisited link */
+    /* visited link */
+    /* mouse over link */
+    /* selected link */
+  }
+  #contact a:link {
+    color: #50545F;
+  }
+  #contact a:visited {
+    color: #50545F;
+  }
+  #contact a:hover {
+    color: #50545F;
+  }
+  #contact a:active {
+    color: #50545F;
+  }
+  #contact h1 {
+    text-align: center;
+    font-family: "ubuntu";
+    font-size: 24px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 5vh;
   }
 }
 
