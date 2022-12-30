@@ -7,29 +7,53 @@ body {
   margin: 0;
 }
 
-@media (min-width: 600px) {
-  #menu-collapsed {
-    transition: all 0.25s;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    height: 10vh;
-  }
-  #div-toggle-menu {
-    display: none;
-  }
-  .menu-text {
-    display: none;
-  }
-  #menu-collapsed ul {
-    display: flex;
-    width: 30vw;
-    padding: 0;
-    justify-content: space-around;
-  }
-}
 @media (max-width: 600px) {
+  .flip-card {
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .flip-card p {
+    text-align: center;
+    width: 80vw;
+  }
+  .flip-card .scene {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 260px;
+    margin: 40px 0;
+    perspective: 600px;
+  }
+  .flip-card .scene .card {
+    width: 70%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    color: #50545F;
+  }
+  .flip-card .scene .card .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #707070;
+    text-align: center;
+    font-family: "ubuntu";
+    font-weight: 400;
+    font-size: 18px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card .scene .card .card__face--back {
+    transform: rotateY(180deg);
+  }
+  .flip-card .scene .card.is-flipped {
+    transform: rotateY(180deg);
+  }
   #div-toggle-menu {
     display: flex;
     flex-direction: row;
@@ -54,6 +78,9 @@ body {
     flex-direction: column;
     position: fixed;
     left: -9000px;
+  }
+  #menu-collapsed .watermark {
+    display: none;
   }
   .menu-expanded {
     transition: all 0.25s;
@@ -113,50 +140,6 @@ body {
     font-weight: 400;
     color: #707070;
   }
-  body .flip-card {
-    display: flex;
-    width: 100vw;
-    height: 70vh;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  body .flip-card p {
-    text-align: center;
-    width: 80vw;
-  }
-  body .flip-card .scene {
-    width: 80vw;
-    height: 260px;
-    margin: 40px 0;
-    perspective: 600px;
-  }
-  body .flip-card .scene .card {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-    color: #50545F;
-  }
-  body .flip-card .scene .card .card__face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: #707070;
-    text-align: center;
-    font-family: "ubuntu";
-    font-weight: 400;
-    font-size: 18px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  body .flip-card .scene .card .card__face--back {
-    transform: rotateY(180deg);
-  }
-  body .flip-card .scene .card.is-flipped {
-    transform: rotateY(180deg);
-  }
   body .div-arrow {
     width: 100vw;
     display: flex;
@@ -184,6 +167,12 @@ body {
       transform: translate(0, 0px);
     }
   }
+  body #projets #wayarrows {
+    display: flex;
+    justify-content: center;
+    margin: 115px 0px 15px 0px;
+    width: 100%;
+  }
   body #projets .projet-intro {
     margin-bottom: 4vh;
   }
@@ -191,6 +180,12 @@ body {
     width: 90vw;
     height: 34vh;
     overflow: hidden;
+  }
+  body #projets .projet-container .big-screen {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    min-height: 300px;
   }
   body #projets .projet-container .projet-slides {
     height: 10vh;
@@ -379,6 +374,236 @@ body {
     font-weight: 400;
     color: #707070;
     margin-bottom: 5vh;
+  }
+}
+@media (min-width: 600px) {
+  body section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body section h2 {
+    font-family: "ubuntu";
+    font-size: 24px;
+    font-weight: 600;
+    color: #707070;
+  }
+  body section p {
+    font-family: "ubuntu";
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+  }
+  body #menu-collapsed {
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+  }
+  body #div-toggle-menu {
+    display: none;
+  }
+  body .menu-text {
+    display: none;
+  }
+  body #menu-collapsed ul {
+    display: flex;
+    width: 30vw;
+    padding: 0;
+    justify-content: space-around;
+  }
+  body header #menu-collapsed {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  body header #menu-collapsed a {
+    margin: 0;
+    text-align: center;
+    font-family: "ubuntu";
+    font-size: 22px;
+    font-weight: 400;
+    color: #707070;
+  }
+  body header #menu-collapsed ul {
+    align-items: center;
+    list-style-type: none;
+    width: 40vw;
+  }
+  body header #div-toggle-menu {
+    display: none;
+  }
+  body header .watermark {
+    display: flex;
+    align-items: center;
+    font-family: "ubuntu";
+    font-size: 22px;
+    font-weight: 400;
+    color: #707070;
+  }
+  body .flip-card {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  body .flip-card p {
+    text-align: center;
+    width: 80vw;
+  }
+  body .flip-card .scene {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 260px;
+    margin: 40px 0;
+    perspective: 600px;
+  }
+  body .flip-card .scene .card {
+    width: 70%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    color: #50545F;
+  }
+  body .flip-card .scene .card .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #707070;
+    text-align: center;
+    font-family: "ubuntu";
+    font-weight: 400;
+    font-size: 18px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  body .flip-card .scene .card .card__face--back {
+    transform: rotateY(180deg);
+  }
+  body .flip-card .scene .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  body .div-arrow {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  body .div-arrow #fleche {
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+  @keyframes floating {
+    from {
+      transform: translate(0, 0px);
+    }
+    65% {
+      transform: translate(0, 15px);
+    }
+    to {
+      transform: translate(0, 0px);
+    }
+  }
+  body #projets #wayarrows {
+    display: none;
+  }
+  body #projets .projet-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body #projets .projet-container .projet-slides {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+  }
+  body #projets .projet-container .projet-slides:hover {
+    cursor: pointer;
+  }
+  body #projets .projet-container .big-screen {
+    width: 50vw;
+    height: 60vh;
+  }
+  body #projets .projet-description {
+    position: absolute;
+    top: 117vh;
+    left: 42vw;
+    width: 27vw;
+    height: 30vh;
+  }
+  body #technologies {
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    padding-left: 0px;
+  }
+  body #technologies .technologies-intro {
+    padding-left: 20px;
+  }
+  body #technologies .technos {
+    width: 450px;
+    height: 30vh;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  body #technologies .technos div {
+    scroll-snap-align: start;
+  }
+  body #technologies .techno {
+    width: 450px;
+    flex-shrink: 0;
+    height: 100%;
+  }
+  body #technologies .techno #rightarrow {
+    margin-left: 35px;
+  }
+  body #technologies .technos::-webkit-scrollbar {
+    width: 6px;
+  }
+  body #technologies .technos::-webkit-scrollbar-thumb {
+    background: #7D7D7D;
+  }
+  body #technologies .technos::-webkit-scrollbar-track {
+    background: #F1EBDC;
+  }
+  body #technologies #techno-1 {
+    background-color: #F1EBDC;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  body #technologies #techno-2 {
+    background-color: rgba(241, 235, 220, 0.2588235294);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  body #technologies #techno-2 img {
+    margin: 0px 10px 0px 10px;
+  }
+  body #technologies h1 {
+    font-family: "ubuntu";
+    font-size: 24px;
+    font-weight: 600;
+    color: #707070;
+  }
+  body #technologies .div-technologies {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8vh;
   }
 }
 

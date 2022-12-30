@@ -12,7 +12,9 @@
     <script src="js/app.js" defer></script>
     <title>Guillaume BENARD</title>
 </head>
-<body>
+
+<!-- HTML DE LA VUE MOBILE -->
+<body id="mobile-view">
     <header>
         <div id="div-toggle-menu">
             <p id="toggle-menu">MENU</p>
@@ -27,6 +29,7 @@
                 <a id="4" href="#parcours"><li>parcours</li></a>
                 <a id="5" href="#contact"><li>contact</li></a>
             </ul>
+            <div class="watermark">GUILLAUME   <strong>BENARD</strong></div>
             <div class="menu-text">
                 <p>Ce portfolio à été créé dans le cadre d'un projet d'étude a MyDigitalSchool, sentez vous libre de le parcourir !</p>
             </div>
@@ -35,7 +38,7 @@
     <div class="flip-card">
         <div class="scene">
             <div class="card">
-              <div class="card__face card__face--front">Bienvenue dans mon portfolio ! avant d'ignorer ce texte pense a cliquer dessus pour faire apparaitre le contenu de ma biographie (comme tu l'auras compris ce texte fais guise de flip-card)</div>
+              <div class="card__face card__face--front">Bienvenue dans mon portfolio ! avant d'ignorer ce texte pense a cliquer dessus pour faire apparaitre le contenu de ma biographie (comme tu l'auras compris ce texte fait guise de flip-card)</div>
               <div class="card__face card__face--back">Hey merci pour avoir cliqué ! Je m'appelle Guillaume BENARD actuellement étudiant en bachelor développement Web chez MyDigitalSchool, ça fait trois ans maintenant que je m'interesse de près à tout ce qui touche au développement <br> et je suis persuadé d'une chose: <strong>on ne fini jamais d'apprendre dans cette profession</strong> </div>
             </div>
           </div>
@@ -61,7 +64,7 @@
             </div>
             
         </div>
-        <div style="display: flex; justify-content: center; margin: 115px 0px 15px 0px; width: 100%;">
+        <div id="wayarrows">
             <img src="medias/slider.png" alt="2wayarrows" width="95%">
         </div>
         <div class="projet-description">
@@ -78,6 +81,8 @@
             <p>Voici une selection de technologies avec lesquels je suis à l'aise et peut construire un projet en les utilisant</p>
         </div>
 
+
+        <div class="div-technologies">
         <!-- front end -->
         <div class="technos">
             <div class="techno" id="techno-1">
@@ -121,6 +126,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <section id="parcours">

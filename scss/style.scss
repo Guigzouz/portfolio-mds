@@ -19,38 +19,59 @@ body{
     margin: 0;
 }
 
-// DESKTOP STYLES
-@media (min-width: $breakpoint-mobile){
-    
-    #menu-collapsed{
-        transition: all .25s;
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        width: 100%;
-        height: 10vh;
-    }
 
-    #div-toggle-menu{
-        display: none;
-    }
-    .menu-text{
-        display: none;
-    }
-
-    #menu-collapsed{
-    ul{
-    display: flex;
-    width: 30vw;
-    padding: 0;
-    justify-content: space-around;
-    }
-}
-}
 
 // MOBILE STYLES
 @media (max-width: $breakpoint-mobile){
 
+  .flip-card{
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+    justify-content: center;
+    align-items: flex-end;
+    p{
+        text-align: center;
+        width: 80vw;
+    }
+    .scene {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      height: 260px;
+      margin: 40px 0;
+      perspective: 600px;
+      .card {
+          width: 70%;
+          height: 100%;
+          transition: transform 1s;
+          transform-style: preserve-3d;
+          cursor: pointer;
+          position: relative;
+          color: #50545F;
+    
+          .card__face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color: $text;
+            text-align: center;
+            font-family: 'ubuntu';
+            font-weight: 400;
+            font-size: 18px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+          }
+    
+          .card__face--back {
+          transform: rotateY(180deg);
+        }
+      }
+      .card.is-flipped {
+        transform: rotateY(180deg);
+      }
+    }
+}
     #div-toggle-menu{
         display: flex;
         flex-direction: row;
@@ -77,6 +98,10 @@ body{
             flex-direction: column;
             position: fixed;
             left: -9000px;
+
+            .watermark{
+              display: none;
+            }
     }
     .menu-expanded{
         transition: all .25s;
@@ -145,52 +170,7 @@ body{
             }
         }
 
-        .flip-card{
-            display: flex;
-            width: 100vw;
-            height: 70vh;
-            justify-content: center;
-            align-items: flex-end;
-            p{
-                text-align: center;
-                width: 80vw;
-            }
-            .scene {
-              width: 80vw;
-              height: 260px;
-              margin: 40px 0;
-              perspective: 600px;
-              .card {
-                  width: 100%;
-                  height: 100%;
-                  transition: transform 1s;
-                  transform-style: preserve-3d;
-                  cursor: pointer;
-                  position: relative;
-                  color: #50545F;
-            
-                  .card__face {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    color: $text;
-                    text-align: center;
-                    font-family: 'ubuntu';
-                    font-weight: 400;
-                    font-size: 18px;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                  }
-            
-                  .card__face--back {
-                  transform: rotateY(180deg);
-                }
-              }
-              .card.is-flipped {
-                transform: rotateY(180deg);
-              }
-            }
-        }
+
 
         .div-arrow{
             width: 100vw;
@@ -217,6 +197,11 @@ body{
         
         #projets{
             
+
+            #wayarrows{
+              display: flex; justify-content: center; margin: 115px 0px 15px 0px; width: 100%;
+            }
+
             .projet-intro{
                 margin-bottom: 4vh;
             }
@@ -225,6 +210,13 @@ body{
                 width: 90vw;
                 height: 34vh;
                 overflow: hidden;
+
+                .big-screen{
+                  display: flex;
+                  flex-direction: column;
+                  height: 300px;
+                  min-height: 300px;
+                }
 
                 .projet-slides{
                     height: 10vh;
@@ -447,4 +439,283 @@ a:link {
     margin-bottom: 5vh;
   }
     }
+}
+
+
+//DESKTOP STYLES
+@media (min-width: $breakpoint-mobile){
+
+  
+body{
+
+  section{
+    padding-left: 20px;
+    padding-right: 20px;
+
+    h2{
+        font-family: 'ubuntu';
+        font-size: 24px;
+        font-weight: 600;
+        color: $text;
+    }
+
+    p{
+        font-family: 'ubuntu';
+        font-size: 18px;
+        font-weight: 400;
+        color: $text;
+    }
+}
+
+
+  #menu-collapsed{
+    transition: all .25s;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+}
+
+#div-toggle-menu{
+    display: none;
+}
+.menu-text{
+    display: none;
+}
+
+#menu-collapsed{
+ul{
+display: flex;
+width: 30vw;
+padding: 0;
+justify-content: space-around;
+}
+}
+
+  header{
+    #menu-collapsed{
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+
+      a{
+        margin: 0;
+        text-align: center;
+        font-family: 'ubuntu';
+        font-size: 22px;
+        font-weight: 400;
+        color: $text;
+    }
+
+      ul{
+        align-items: center;
+        list-style-type: none;
+        width: 40vw;
+      }
+    }
+
+    #div-toggle-menu{
+      display: none;
+    }
+
+    .watermark{
+      display: flex;
+      align-items: center;
+      font-family: 'ubuntu';
+      font-size: 22px;
+      font-weight: 400;
+      color: $text;
+    }
+  }
+
+
+  .flip-card{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: flex-end;
+    p{
+        text-align: center;
+        width: 80vw;
+    }
+    .scene {
+      display: flex;
+      justify-content: center;
+      width: 80vw;
+      height: 260px;
+      margin: 40px 0;
+      perspective: 600px;
+      .card {
+          width: 70%;
+          height: 100%;
+          transition: transform 1s;
+          transform-style: preserve-3d;
+          cursor: pointer;
+          position: relative;
+          color: #50545F;
+    
+          .card__face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color: $text;
+            text-align: center;
+            font-family: 'ubuntu';
+            font-weight: 400;
+            font-size: 18px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+          }
+    
+          .card__face--back {
+          transform: rotateY(180deg);
+        }
+      }
+      .card.is-flipped {
+        transform: rotateY(180deg);
+      }
+    }
+}
+
+.div-arrow{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  #fleche{
+      width: 100px;
+      height: 100px;
+      opacity: 0.5;
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      margin-left: 30px;
+      margin-top: 5px;
+  }
+  @keyframes floating {
+      from { transform: translate(0,  0px); }
+      65%  { transform: translate(0, 15px); }
+      to   { transform: translate(0, -0px); }    
+  }
+  
+}
+
+#projets{
+
+  #wayarrows{
+    display: none;
+  }
+
+  .projet-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .projet-slides{
+      display: flex;
+    flex-direction: column;
+    width: 15vw;
+    }
+
+    .projet-slides:hover{
+      cursor: pointer;
+    }
+
+    .big-screen{
+      width: 50vw;
+      height: 60vh;
+    }
+  }
+
+  .projet-description{
+    position: absolute;
+    top: 117vh;
+    left: 42vw;
+    width: 27vw;
+    height: 30vh;
+  }
+}
+
+#technologies{
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+  padding-left: 0px;
+
+  .technologies-intro{
+      padding-left: 20px;
+  }
+
+  .technos {
+      width: 450px;
+      height: 30vh;
+      display: flex;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;  
+
+      div{
+          scroll-snap-align: start;
+      }
+    }
+    .techno {
+      width: 450px;
+      flex-shrink: 0;
+      height: 100%;
+
+      #rightarrow{
+          margin-left: 35px;
+      }
+
+      
+
+    }
+
+    .technos::-webkit-scrollbar {
+      width: 6px;
+    }
+     
+    .technos::-webkit-scrollbar-thumb {
+      background: $grey;
+    }
+    
+    .technos::-webkit-scrollbar-track {
+      background: $techno-block;
+    }
+
+    #techno-1{
+      background-color: $techno-block;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+    
+    #techno-2{
+      background-color: $techno-block2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      img{
+          margin: 0px 10px 0px 10px;
+      }
+    }
+
+    h1{
+      font-family: 'ubuntu';
+      font-size: 24px;
+      font-weight: 600;
+      color: $text;
+    }
+
+    .div-technologies{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8vh;
+    }
+}
+
+}
 }
