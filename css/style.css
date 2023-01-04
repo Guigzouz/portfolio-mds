@@ -72,6 +72,14 @@ body {
     font-weight: 400;
     color: #707070;
   }
+  #div-toggle-menu a:link {
+    text-decoration: none;
+    color: #707070;
+  }
+  #div-toggle-menu a:visited {
+    text-decoration: none;
+    color: #707070;
+  }
   #menu-collapsed {
     transition: all 0.25s;
     display: flex;
@@ -604,6 +612,136 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin: 8vh;
+  }
+  body #parcours {
+    margin-bottom: 10vh;
+    /* The Modal (background) */
+    /* Modal Content */
+    /* The Close Button */
+    /* The Modal (background) */
+    /* Modal Content */
+    /* The Close Button */
+  }
+  body #parcours .parcours-whole {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8vh;
+  }
+  body #parcours .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  body #parcours .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  body #parcours .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  body #parcours .close:hover,
+  body #parcours .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  body #parcours #myBtn {
+    width: 450px;
+    height: 25vh;
+    background-color: #F1EBDC;
+    border: solid;
+    border-color: #7D7D7D;
+    font-family: "ubuntu";
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 3vh;
+  }
+  body #parcours .modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  body #parcours .modal-content2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  body #parcours .close2 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  body #parcours .close2:hover,
+  body #parcours .close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  body #parcours #myBtn2 {
+    width: 450px;
+    height: 25vh;
+    background-color: #F1EBDC;
+    border: solid;
+    border-color: #7D7D7D;
+    font-family: "ubuntu";
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+  }
+  body #parcours a:link {
+    color: #50545F;
+  }
+  body #contact {
+    /* unvisited link */
+    /* visited link */
+    /* mouse over link */
+    /* selected link */
+  }
+  body #contact a:link {
+    color: #50545F;
+  }
+  body #contact a:visited {
+    color: #50545F;
+  }
+  body #contact a:hover {
+    color: #50545F;
+  }
+  body #contact a:active {
+    color: #50545F;
+  }
+  body #contact h1 {
+    text-align: center;
+    font-family: "ubuntu";
+    font-size: 24px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 5vh;
   }
 }
 

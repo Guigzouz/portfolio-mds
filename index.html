@@ -18,8 +18,8 @@
     <header>
         <div id="div-toggle-menu">
             <p id="toggle-menu">MENU</p>
-            <p> GUILLAUME <br> <strong>BENARD</strong></p>
-            <p> CONTACT</p>
+            <p><a href="#">GUILLAUME <br><strong>BENARD</strong></a> </p>
+            <p><a href="#contact">CONTACT</a> </p>
         </div>
         <div id="menu-collapsed">
             <ul>
@@ -54,13 +54,13 @@
         </div>
         <div class="projet-container">
             <div class="big-screen">
-                <img src="https://picsum.photos/400/300" alt="">
+                <img src="medias/flappy.png" alt="flappy bird project">
             </div>
             <div class="projet-slides">
-                <img id="img1" src="https://picsum.photos/400/300?random=1">
-                <img id="img2" src="https://picsum.photos/400/300?random=2">
-                <img id="img3" src="https://picsum.photos/400/300?random=3">
-                <img id="img4" src="https://picsum.photos/400/300?random=4">
+                <img id="img1" src="medias/flappy.png">
+                <img id="img2" src="medias/pass.png">
+                <img id="img3" src="medias/fortnite.png">
+                <img id="img4" src="medias/color.png">
             </div>
             
         </div>
@@ -68,10 +68,10 @@
             <img src="medias/slider.png" alt="2wayarrows" width="95%">
         </div>
         <div class="projet-description">
-            <p style="display: block;" id="desc1">desc1</p>
-            <p style="display: none;" id="desc2">desc2</p>
-            <p style="display: none;" id="desc3">desc3</p>
-            <p style="display: none;" id="desc4">desc4</p>
+            <p style="display: block;" id="desc1">Construction d'un jeu FlappyBird disponible <a href="https://guigzouz.github.io/">ici</a> dans le cadre d'un cours de POO, utilisation de la librairie pixiJS</p>
+            <p style="display: none;" id="desc2">Développement d'un générateur de mots de passes avec plusieurs paramètres, utilisation de JavaScript principalement, disponible <a href="https://guigzouz.github.io/password_generator_link/">ici</a></p>
+            <p style="display: none;" id="desc3">Développement d'un semblant de moteur de recherche pour des images, utilsation de la banque d'image Flickr, disponible <a href="https://guigzouz.github.io/flickr/">ici</a></p>
+            <p style="display: none;" id="desc4">Développement d'un générateur de codes couleurs en hexadécimal et affichage de cette dites couleur , disponible <a href="https://guigzouz.github.io/color_flipper_link/hex.html">ici</a></p>
         </div>
     </section>
 
@@ -135,44 +135,47 @@
             <p>Voici devant vous des détails sur mon parcours dans l'éducation supérieure ainsi que mon parocurs professionnel</p>
         </div>
 
+        <div class="parcours-whole">
 
-<!-- PARCOURS SCOLAIRE -->
-        <!-- Trigger/Open The Modal -->
-<button id="myBtn"> <h2>Education</h2> <br>( clique moi )</button>
+            <!-- PARCOURS SCOLAIRE -->
+                    <!-- Trigger/Open The Modal -->
+            <button id="myBtn"> <h2>Education</h2> <br>( clique moi )</button>
+            
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+            
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Lycée</h2>
+                <p>Depuis cette maintenant lointaine période je savais qu'un travail dans les nouvelles technlogies m'interesserait, ce qui explique mon choix de faire <strong>STI2D</strong></p>
+                <h2>BAC+2 : DUT</h2>
+                <p>Suite a mon BAC STI2D, je continue mon chemin dans l'univers plus ciblé internet cette fois-ci en faisant un DUT <strong>"MMI"</strong> (Métiers du Multimédia et de l'Internet)</p>
+                <h2>BAC+3 : Bachelor</h2>
+                <p>Formation actuellement suivie, ce <strong>Bachelor développeur Web</strong> n'est que la continuité logique après m'être décidé que mon métier sera celui de développeur</p>
+            </div>
+            
+            </div>
+            
+            
+            <!-- PARCOURS HORS SCOLAIRE -->
+            <button id="myBtn2"> <h2>Professionnel</h2> <br>( clique moi )</button>
+            
+            <!-- The Modal -->
+            <div id="myModal2" class="modal2">
+            
+              <!-- Modal content -->
+              <div class="modal-content2">
+                <span class="close2">&times;</span>
+                <h2>Stage de fin de DUT</h2>
+                <p>Ce <strong>stage de 11 semaines</strong> dans l'agence web <a href="https://www.business-web-agence.com/">BWA</a> à Dijon m'a servi d'introduction sérieuse a tout les penchants du métier de Développeur Web</p>
+                <h2>Alternance de Bachelor</h2>
+                <p>Dans le cadre de ma formation en tant que <strong>Bachelor Développeur Web</strong> je suis actuellement en alternance dans l'entreprise <a href="https://arxama.com/">Arxama</a> ou j'occupe un role important en tant que développeur junior car nous travaillons en équipes réduites</p>
+            </div>
+            
+            </div>
+        </div>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Lycée</h2>
-    <p>Depuis cette maintenant lointaine période je savais qu'un travail dans les nouvelles technlogies m'interesserait, ce qui explique mon choix de faire <strong>STI2D</strong></p>
-    <h2>BAC+2 : DUT</h2>
-    <p>Suite a mon BAC STI2D, je continue mon chemin dans l'univers plus ciblé internet cette fois-ci en faisant un DUT <strong>"MMI"</strong> (Métiers du Multimédia et de l'Internet)</p>
-    <h2>BAC+3 : Bachelor</h2>
-    <p>Formation actuellement suivie, ce <strong>Bachelor développeur Web</strong> n'est que la continuité logique après m'être décidé que mon métier sera celui de développeur</p>
-</div>
-
-</div>
-
-
-<!-- PARCOURS HORS SCOLAIRE -->
-<button id="myBtn2"> <h2>Professionnel</h2> <br>( clique moi )</button>
-
-<!-- The Modal -->
-<div id="myModal2" class="modal2">
-
-  <!-- Modal content -->
-  <div class="modal-content2">
-    <span class="close2">&times;</span>
-    <h2>Stage de fin de DUT</h2>
-    <p>Ce <strong>stage de 11 semaines</strong> dans l'agence web <a href="https://www.business-web-agence.com/">BWA</a> à Dijon m'a servi d'introduction sérieuse a tout les penchants du métier de Développeur Web</p>
-    <h2>Alternance de Bachelor</h2>
-    <p>Dans le cadre de ma formation en tant que <strong>Bachelor Développeur Web</strong> je suis actuellement en alternance dans l'entreprise <a href="https://arxama.com/">Arxama</a> ou j'occupe un role important en tant que développeur junior car nous travaillons en équipes réduites</p>
-</div>
-
-</div>
 </section>
 
 <section id="contact">
